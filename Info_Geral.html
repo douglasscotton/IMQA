@@ -14,6 +14,10 @@ function getUrlVars() {
 
 var SF_Cliente = getUrlVars()["SF_Cliente"];
 var SF_Endereco = getUrlVars()["SF_Endereco"];
+var SF_Contacto = getUrlVars()["SF_Contacto"];
+var SF_ContactoEmail = getUrlVars()["SF_ContactoEmail"];
+var SF_ContactoTel = getUrlVars()["SF_ContactoTel"];
+var SF_ContactoCargo = getUrlVars()["SF_ContactoCargo"];
 
 </script>
 
@@ -48,7 +52,7 @@ var SF_Endereco = getUrlVars()["SF_Endereco"];
 				<tbody>
 					<tr>
 						<td style="background-color: rgb(68, 84, 106); vertical-align: middle; text-align: justify; height: 30px; border-color: rgb(0, 0, 0); width: 238px;">&nbsp; <span style="color:#FFFFFF;"><span style="font-size:18px;"><strong><span style="font-family:arial,helvetica,sans-serif;">Nome do CONTRATANTE</span></strong></span></span></td>
-						<td style="width: 583px; border-color: rgb(0, 0, 0);">&nbsp; <span style="font-family:arial,helvetica,sans-serif;">&nbsp; &nbsp;<script>document.write(SF_Cliente);</script></span></td>
+						<td style="width: 583px; border-color: rgb(0, 0, 0);">&nbsp; <span style="font-family:arial,helvetica,sans-serif;">&nbsp; &nbsp;<script>document.write(SF_Cliente.replace(/%20/g," "));</script></span></td>
 					</tr>
 					<tr>
 						<td style="height: 30px; background-color: rgb(68, 84, 106); border-color: rgb(0, 0, 0); width: 238px;"><strong style="color: rgb(255, 255, 255); font-size: 18px; text-align: justify; background-color: rgb(68, 84, 106);"><span style="font-family: arial, helvetica, sans-serif;">&nbsp; Endereco</span></strong></td>
@@ -56,10 +60,10 @@ var SF_Endereco = getUrlVars()["SF_Endereco"];
 					</tr>
 					<tr>
 						<td style="height: 30px; background-color: rgb(68, 84, 106); border-color: rgb(0, 0, 0); width: 238px;"><strong style="background-color: rgb(68, 84, 106); color: rgb(255, 255, 255); font-size: 18px; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif;">&nbsp; Contato</span></strong></td>
-						<td style="width: 583px; border-color: rgb(0, 0, 0);"><span style="font-family:arial,helvetica,sans-serif;">&nbsp; <span style="font-size:18px;"><strong>&nbsp;</strong></span><span style="font-size:16px;"><span style="font-size:18px;"><strong>Nome:</strong></span> NOME CONTATO<br />
-						&nbsp; &nbsp;</span><span style="font-size:18px;"><strong>email:&nbsp;</strong></span><span style="font-size:16px;"> EMAIL<br />
-						&nbsp; &nbsp;</span><span style="font-size:18px;"><strong>Telefone:</strong></span><span style="font-size:16px;"> TELEFONE<br />
-						&nbsp; &nbsp;</span><span style="font-size:18px;"><strong>Cargo:&nbsp;</strong></span><span style="font-size:16px;"> &nbsp;CARGO</span></span></td>
+						<td style="width: 583px; border-color: rgb(0, 0, 0);"><span style="font-family:arial,helvetica,sans-serif;">&nbsp; <span style="font-size:18px;"><strong>&nbsp;</strong></span><span style="font-size:16px;"><span style="font-size:18px;"><strong>Nome:</strong></span> <script>document.write(SF_Contacto.replace(/%20/g," ")); </script><<br />
+						&nbsp; &nbsp;</span><span style="font-size:18px;"><strong>email:&nbsp;</strong></span><span style="font-size:16px;"> <script>document.write(SF_ContactoEmail.replace(/%20/g," ")); </script><<br />
+						&nbsp; &nbsp;</span><span style="font-size:18px;"><strong>Telefone:</strong></span><span style="font-size:16px;"> <script>document.write(SF_ContactoTel.replace(/%20/g," ")); </script><<br />
+						&nbsp; &nbsp;</span><span style="font-size:18px;"><strong>Cargo:&nbsp;</strong></span><span style="font-size:16px;"> &nbsp;<script>document.write(SF_ContactoCargo.replace(/%20/g," ")); </script><</span></span></td>
 					</tr>
 					<tr>
 						<td style="width: 238px; height: 30px; background-color: rgb(68, 84, 106); border-color: rgb(0, 0, 0);"><strong style="background-color: rgb(68, 84, 106); color: rgb(255, 255, 255); font-size: 18px; text-align: justify;"><span style="font-family:arial,helvetica,sans-serif;">&nbsp; Nome do Projeto</span></strong></td>
