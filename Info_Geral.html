@@ -13,7 +13,7 @@ function getUrlVars() {
 }
 
 var SF_Cliente = getUrlVars()["SF_Cliente"];
-var date = new Date().toLocaleDateString();
+var SF_Endereco = getUrlVars()["SF_Endereco"];
 
 </script>
 
@@ -52,7 +52,7 @@ var date = new Date().toLocaleDateString();
 					</tr>
 					<tr>
 						<td style="height: 30px; background-color: rgb(68, 84, 106); border-color: rgb(0, 0, 0); width: 238px;"><strong style="color: rgb(255, 255, 255); font-size: 18px; text-align: justify; background-color: rgb(68, 84, 106);"><span style="font-family: arial, helvetica, sans-serif;">&nbsp; Endereco</span></strong></td>
-						<td style="width: 583px; border-color: rgb(0, 0, 0);"><span style="font-family:arial,helvetica,sans-serif;">&nbsp; &nbsp;ENDERECO</span></td>
+						<td style="width: 583px; border-color: rgb(0, 0, 0);"><span style="font-family:arial,helvetica,sans-serif;">&nbsp; &nbsp;<script>document.write(SF_Endereco);</script><</span></td>
 					</tr>
 					<tr>
 						<td style="height: 30px; background-color: rgb(68, 84, 106); border-color: rgb(0, 0, 0); width: 238px;"><strong style="background-color: rgb(68, 84, 106); color: rgb(255, 255, 255); font-size: 18px; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif;">&nbsp; Contato</span></strong></td>
