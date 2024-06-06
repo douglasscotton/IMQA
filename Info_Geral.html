@@ -20,6 +20,7 @@ var SF_ContactoTel = getUrlVars()["SF_ContactoTel"];
 var SF_ContactoCargo = getUrlVars()["SF_ContactoCargo"];
 var SF_Projeto = getUrlVars()["SF_Projeto"];
 
+var name = getUrlVars()["name"];
 var TipoProjeto = getUrlVars()["TipoProjeto"];
 var TipoProjetoNome = "Histórico"
 var Pr_Volume = parseInt(getUrlVars()["Pr_Volume"]);
@@ -91,7 +92,7 @@ if (TipoProjeto == "Recorrente")
 					<tr>
 						<td style="width: 238px; height: 60px; background-color: rgb(68, 84, 106); border-color: rgb(0, 0, 0);"><strong style="background-color: rgb(68, 84, 106); color: rgb(255, 255, 255); font-size: 18px; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif;">&nbsp; Volume</span></strong></td>
 						<td style="width: 583px; border-color: rgb(0, 0, 0);"><span style="font-family:arial,helvetica,sans-serif;">&nbsp; &nbsp;<script>document.write(TipoProjetoNome.replace(/%20/g," ")); </script><br />
-						&nbsp; &nbsp;Digitalizacao de <script>document.write(String(total_images).replace(/\B(?=(\d{3})+(?!\d))/g, ".")); </script> documentos (aproximadamente XXX imagens)</span></td>
+						&nbsp; &nbsp;Digitalizacao de <script>document.write(String(PR_Volume).replace(/\B(?=(\d{3})+(?!\d))/g, ".")); </script> documentos <script>document.write(TipoProjetoTexto.replace(/%20/g," ")); </script>(aproximadamente <script>document.write(String(total_images).replace(/\B(?=(\d{3})+(?!\d))/g, ".")); </script> imagens)</span></td>
 					</tr>
 					<tr>
 						<td style="width: 238px; height: 60px; background-color: rgb(68, 84, 106); border-color: rgb(0, 0, 0);"><strong style="background-color: rgb(68, 84, 106); color: rgb(255, 255, 255); font-size: 18px; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif;">&nbsp; In&iacute;cio do Porjeto</span></strong></td>
@@ -99,11 +100,11 @@ if (TipoProjeto == "Recorrente")
 					</tr>
 					<tr>
 						<td style="width: 238px; height: 30px; background-color: rgb(68, 84, 106); border-color: rgb(0, 0, 0);"><span style="font-family:arial,helvetica,sans-serif;">&nbsp;&nbsp;</span><strong style="background-color: rgb(68, 84, 106); color: rgb(255, 255, 255); font-size: 18px; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif;">Duracao do Projeto</span></strong></td>
-						<td style="width: 583px; border-color: rgb(0, 0, 0);"><span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:16px;">&nbsp; TEMPO meses ap&oacute;s o Go Live do projeto via cronograma a ser sinalizado pelo Gerente de Projetos.</span></span>&nbsp;</td>
+						<td style="width: 583px; border-color: rgb(0, 0, 0);"><span style="font-family:arial,helvetica,sans-serif;"><span style="font-size:16px;">&nbsp; <script>document.write(String(qtde_mes).replace(/\B(?=(\d{3})+(?!\d))/g, ".")); </script> mes(es) ap&oacute;s o Go Live do projeto via cronograma a ser sinalizado pelo Gerente de Projetos.</span></span>&nbsp;</td>
 					</tr>
 					<tr>
 						<td style="width: 238px; height: 30px; background-color: rgb(68, 84, 106); border-color: rgb(0, 0, 0);"><strong style="background-color: rgb(68, 84, 106); color: rgb(255, 255, 255); font-size: 18px; text-align: justify;"><span style="font-family: arial, helvetica, sans-serif;">&nbsp; Contato Iron Mountain</span></strong></td>
-						<td style="width: 583px; border-color: rgb(0, 0, 0);">&nbsp;&nbsp;<span style="font-family: arial, helvetica, sans-serif; font-size: 18px;"><strong>&nbsp;</strong></span><span style="font-family: arial, helvetica, sans-serif; font-size: 16px;"><span style="font-size: 18px;"><strong>Gerente Comercial:</strong></span>&nbsp;NOME COMERCIAL<br />
+						<td style="width: 583px; border-color: rgb(0, 0, 0);">&nbsp;&nbsp;<span style="font-family: arial, helvetica, sans-serif; font-size: 18px;"><strong>&nbsp;</strong></span><span style="font-family: arial, helvetica, sans-serif; font-size: 16px;"><span style="font-size: 18px;"><strong>Gerente Comercial:</strong></span>&nbsp;<script>document.write(name.replace(/%20/g," ")); </script><br />
 						&nbsp; &nbsp;</span><span style="font-family: arial, helvetica, sans-serif; font-size: 18px;"><strong>email:&nbsp;</strong></span><span style="font-family: arial, helvetica, sans-serif; font-size: 16px;">&nbsp;EMAIL COMERCIAL</span></td>
 					</tr>
 				</tbody>
@@ -129,7 +130,7 @@ if (TipoProjeto == "Recorrente")
 				<tbody>
 					<tr>
 						<td style="width: 108px;">&nbsp;</td>
-						<td style="width: 830px;"><span style="font-size:14px;"><span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-ed0b0f3b-7fff-7652-fdee-e3c9b48c8a28"><span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">Este documento tem por objetivo descrever e detalhar a presta&ccedil;&atilde;o de servi&ccedil;o de digitaliza&ccedil;&atilde;o dos documentos para a</span><span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"><b> NOME CLIENTE</b></span><span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">. Os documentos f&iacute;sicos ser&atilde;o processados nas depend&ecirc;ncias da Iron Mountain.</span></span></span></span></td>
+						<td style="width: 830px;"><span style="font-size:18px;"><span style="font-family:arial,helvetica,sans-serif;"><span id="docs-internal-guid-ed0b0f3b-7fff-7652-fdee-e3c9b48c8a28"><span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">Este documento tem por objetivo descrever e detalhar a presta&ccedil;&atilde;o de servi&ccedil;o de digitaliza&ccedil;&atilde;o dos documentos para a</span><span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"><b> NOME CLIENTE</b></span><span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">. Os documentos f&iacute;sicos ser&atilde;o processados nas depend&ecirc;ncias da Iron Mountain.</span></span></span></span></td>
 					</tr>
 				</tbody>
 			</table>
