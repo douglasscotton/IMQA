@@ -21,11 +21,19 @@ var SF_ContactoCargo = getUrlVars()["SF_ContactoCargo"];
 var SF_Projeto = getUrlVars()["SF_Projeto"];
 
 var TipoProjeto = getUrlVars()["TipoProjeto"];
-var TipoProjetoNome = °Histórico°
+var TipoProjetoNome = "Histórico"
+var Pr_Volume = parseInt(getUrlVars()["Pr_Volume"]);
+var qtde_pages = parseInt(getUrlVars()["qtde_pages"]);
+var qtde_mes = parseInt(getUrlVars()["qtde_mes"]);
+var duplex = getUrlVars()["duplex"];
 
-if (TipoProjeto == "Recorrente)
+var total_images = parseInt((parseInt(Pr_Volume) * parseInt(qtde_pages)) * (1 + (duplex / 100)));
+
+var TipoProjetoTexto = ""	
+if (TipoProjeto == "Recorrente")
 {
 	TipoProjetoNome = "Recorrente"
+	TipoProjetoTexto = "mensal"
 }
 
 
