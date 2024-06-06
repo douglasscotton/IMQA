@@ -2,7 +2,21 @@
 <head>
 	<title></title>
 </head>
-<body style="cursor: auto;">
+<body style="cursor: auto;"><script type="text/javascript">
+
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+var SF_Cliente = getUrlVars()["SF_Cliente"];
+var date = new Date().toLocaleDateString();
+
+</script>
+
 <table align="center" border="0" cellpadding="0" cellspacing="0" style="width: 1053px;">
 	<tbody>
 		<tr>
