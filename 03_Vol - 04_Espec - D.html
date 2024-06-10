@@ -29,6 +29,7 @@ var qtde_mes = parseInt(getUrlVars()["qtde_mes"]);
 var duplex = getUrlVars()["duplex"];
 
 var total_images = parseInt((parseInt(Pr_Volume) * parseInt(qtde_pages)) * (1 + (duplex / 100)));
+var total_images_mensal = (parseInt((parseInt(Pr_Volume) * parseInt(qtde_pages)) * (1 + (duplex / 100)))) / qtde_mes;
 
 var TipoProjetoTexto = ""	
 if (TipoProjeto == "Recorrente")
@@ -90,8 +91,8 @@ if (TipoProjeto == "Recorrente")
 						<td style="text-align: center; background-color: rgb(238, 238, 238);"><span style="font-family:arial,helvetica,sans-serif;">24</span></td>
 						<td style="text-align: center; background-color: rgb(238, 238, 238);"><span style="font-family:arial,helvetica,sans-serif;"><span style="text-align: center;">Digitaliza&ccedil;&atilde;o</span></span></td>
 						<td style="text-align: center; background-color: rgb(238, 238, 238);"><span style="font-family:arial,helvetica,sans-serif;">imagem</span></td>
-						<td style="text-align: center; background-color: rgb(238, 238, 238);"><span style="font-family:arial,helvetica,sans-serif;">VOL MENSAL</span></td>
-						<td style="text-align: center; background-color: rgb(238, 238, 238);"><span style="font-family:arial,helvetica,sans-serif;">VOL TOTAL</span></td>
+						<td style="text-align: center; background-color: rgb(238, 238, 238);"><span style="font-family:arial,helvetica,sans-serif;"><script>document.write(String(total_images_mensal).replace(/\B(?=(\d{3})+(?!\d))/g, ".")); </script></span></td>
+						<td style="text-align: center; background-color: rgb(238, 238, 238);"><span style="font-family:arial,helvetica,sans-serif;"><script>document.write(String(total_images).replace(/\B(?=(\d{3})+(?!\d))/g, ".")); </script></span></td>
 					</tr>
 				</tbody>
 			</table>
