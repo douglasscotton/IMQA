@@ -12,6 +12,7 @@ function getUrlVars() {
     return vars;
 }
 
+var email = getUrlVars()["email"];
 var SF_Cliente = getUrlVars()["SF_Cliente"];
 var SF_Endereco = getUrlVars()["SF_Endereco"];
 var SF_Contacto = getUrlVars()["SF_Contacto"];
@@ -87,7 +88,7 @@ if (TipoProjeto == "Recorrente")
 						<br />
 						&nbsp;
 						<hr /><span style="font-family:arial,helvetica,sans-serif;"><strong>Gerente Comercial:&nbsp;&nbsp;</strong> <script>document.write(name.replace(/%20/g," ")); </script><br />
-						<strong>email:&nbsp;&nbsp;</strong>&nbsp; EMAIL COMERCIAL</span><br />
+						<strong>email:&nbsp;&nbsp;</strong>&nbsp; <script>document.write(email.replace(/%20/g," ")); </script></span><br />
 						<br />
 						<br />
 						&nbsp;</td>
